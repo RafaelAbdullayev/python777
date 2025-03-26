@@ -8,13 +8,13 @@
 #
 # print(id(name))
 # print(id(age))
-import fontTools.t1Lib
-from cgi import print_form
-from fontTools.misc.cython import returns
-from pygments.lexer import words
-from pygments.lexers import find_lexer_class_by_name
-from pymupdf.mupdf import ll_fz_open_image_decomp_stream_outparams, pdf_set_annot_border_effect_intensity
-from pywin.Demos.openGLDemo import twoto8
+# import fontTools.t1Lib
+# from cgi import print_form
+# from fontTools.misc.cython import returns
+# from pygments.lexer import words
+# from pygments.lexers import find_lexer_class_by_name
+# from pymupdf.mupdf import ll_fz_open_image_decomp_stream_outparams, pdf_set_annot_border_effect_intensity
+# from pywin.Demos.openGLDemo import twoto8
 
 # a = b = c = 10
 # a, b, c = 5, "Hello", 7.2
@@ -3468,9 +3468,9 @@ from pywin.Demos.openGLDemo import twoto8
 # with open("one.txt", "r") as fr, open("two.txt", "w") as fw:
 #     for line in fr:
 #         line = line.replace("строка", "Линия")
-#         fw.write(line)
+# #         fw.write(line)
 
-import os
+# import os
 # #
 # # print(os.getcwd())
 # #
