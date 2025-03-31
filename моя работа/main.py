@@ -15,6 +15,9 @@
 # from pygments.lexers import find_lexer_class_by_name
 # from pymupdf.mupdf import ll_fz_open_image_decomp_stream_outparams, pdf_set_annot_border_effect_intensity
 # from pywin.Demos.openGLDemo import twoto8
+import os
+
+from pydantic.v1.main import object_setattr
 
 # a = b = c = 10
 # a, b, c = 5, "Hello", 7.2
@@ -3477,4 +3480,85 @@
 # # print(os.listdir(".."))
 #
 # os.mkdir("folder")
+# import os
+#
+# # Структура директорий и файлов
+# structure = {
+#     "Work": ["w.txt"],
+#     "Work/F1": ["f11.txt", "f12.txt", "f13.txt"],
+#     "Work/F2/F21": ["f211.txt", "f212.txt"]
+# }
+#
+# # Файлы с содержимым
+# content_files = {
+#     "Work/w.txt": "Содержимое w.txt",
+#     "Work/F1/f12.txt": "Содержимое f12.txt",
+#     "Work/F2/F21/f211.txt": "Содержимое f211.txt",
+#     "Work/F2/F21/f212.txt": "Содержимое f212.txt"
+# }
+#
+# # Создание директорий и файлов
+# for folder, files in structure.items():
+#     os.makedirs(folder, exist_ok=True)
+#     for file in files:
+#         path = os.path.join(folder, file)
+#         with open(path, "w", encoding="utf-8") as f:
+#             f.write(content_files.get(path, ""))
+#
+# # Функция обхода дерева
+# def traverse(root, topdown):
+#     for dirpath, _, filenames in os.walk(root, topdown=topdown):
+#         for filename in filenames:
+#             path = os.path.join(dirpath, filename)
+#             with open(path, "r", encoding="utf-8") as f:
+#                 print(f"{'Сверху вниз' if topdown else 'Снизу вверх'}: {path} → {f.read()}")
+#
+# # Запуск обходов
+# print("\nОбход снизу вверх:")
+# traverse("Work", topdown=False)
+#
+# print("\nОбход сверху вниз:")
+# traverse("Work", topdown=True)
 
+# import os
+#
+# def check_file(test.txt):
+#     if os.path.exists(test.txt):
+#
+#         directory = os.path.dirname(test.txt)
+#         test.txt = os.path.basename(test.txt)
+#
+#         last_access_time = os.path.getatime(test.txt)
+#
+#         last_access_time = time.ctime(last_access_time)
+#
+#         print(f"{test.txt} ({directory}) - last access time {last_access_time}")
+#     else:
+#         print(f"Файл test.txt} не существует")
+#
+#
+# test.txt = "test_dir/f1"
+# check_file(test.txt)
+
+import os
+
+
+def scan_directory(directory):
+
+    for item in os.listdir(directory):
+        item_path = os.path.join(directory, item)
+
+
+        if os.path.isfile(item_path):
+
+            size = os.path.getsize(item_path)
+            print(f"{item} - file - {size} bytes")
+
+
+        elif os.path.isdir(item_path):
+            print(f"{item} - dir")
+
+
+
+directory_to_scan = "work"
+scan_directory(directory_to_scan)
