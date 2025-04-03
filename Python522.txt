@@ -1,0 +1,151 @@
+https://www.python.org/
+
+Win + R => cmd
+python
+py
+
+print("Hello World")
+
+
+Вид -> Расширения имен файлов
+
+python 1.py
+
+IDLE
+
+Ctrl + /
+
+False => "", 0, 0.0, False, None
+
+
+Типы данных:
+- неизменяемые
+	str - строка
+	int - целое число
+	float - вещественное число
+	bool - булевый тип
+	tuple - кортеж
+	frozenset - замороженное множество 
+- изменяемый
+	list - список
+	set - множество
+	dict - словарь
+
+Длина списка = последний индекс + 1
+последний индекс = длина списка - 1
+
+PEP20
+import this
+
+PEP8
+
+1) от 0 по 9
+2)
+ворона - 1
+вороны - 2, 3, 4
+ворон - 5, 6, 7, 8, 9, 0
+
+Исключения: 11, 12, 13, 14
+
+копейка - 1, 21, 31, ..., 91
+копейки 
+2, 22, 92
+3,
+4, 
+копеек
+5 
+6, 7, 8, 9, 0
+
+text.txt
+
+Hello!
+
+
+
+Система контроля версий (Version Control Systems, VCS)
+git --version
+
+git init
+- инициализация репозитория (указывается один раз)
+
+git status
+- проверить статус репозитория
+
+git add -A
+		--all
+		main.py
+		.
+- добавляет файлы git
+
+git config --global user.name "new_user"
+           --local
+		   
+git config --global user.name
+
+git config --global user.email "test@mail.ru"
+git config --global user.email
+
+git commit -m "first commit"
+
+.gitignore
+
+
+git commit -m "added gitignore"
+
+токен
+
+Win + R => control
+
+
+https://github.com
+
+git remote add origin https://github.com/Helen-prog/Python522.git
+git push -u origin master
+
+
+0) git status
+1) git add .
+2) git commit -m "change file"
+3) git push
+
+git branch
+- просмотр веток
+
+git branch test
+- создание ветки
+
+git branch -D test
+- удаление ветки
+
+git branch readme
+
+git checkout readme
+- перейти на ветку
+
+readme.md
+
+
+git checkout master
+
+master -> readme
+- readme.md
+
+		   
+git merge readme
+- слияние веток
+
+git clone https://github.com/Helen-prog/Python522.git
+- клонирование репозитория
+
+git pull
+- забираем изменения с удаленного репозитория в локальный.
+
+
+class ClassName:
+	свойства - (переменные, поля)
+		- динамические (__init__)
+		- статические 
+	методы - (функции)
+	
+	атрибуты = свойства + методы
+	

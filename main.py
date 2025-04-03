@@ -8,7 +8,6 @@
 #
 # print(id(name))
 # print(id(age))
-# from os import write
 
 # a = b = c = 10
 # a, b, c = 5, "Hello", 7.2
@@ -3508,8 +3507,7 @@
 #
 # print(longest_world(file_name))
 
-# text = "Строка №1\nСтрока №2\nСтрока №3\nСтрока №4\nСтрока №5\nСтрока №6\nСтрока №7\n
-# Строка №8\nСтрока №9\nСтрока №10\n"
+# text = "Строка №1\nСтрока №2\nСтрока №3\nСтрока №4\nСтрока №5\nСтрока №6\nСтрока №7\nСтрока №8\nСтрока №9\nСтрока №10\n"
 # with open("one.txt", "w") as f:
 #     f.write(text)
 #
@@ -3565,533 +3563,72 @@
 # print(os.path.isfile(r"E:\Python522\nested1\nested2\nested3\text3.txt"))
 # print(os.path.isdir(r"E:\Python522\nested1\nested2\nested3"))
 
-
-# with open("text1.txt", "w+") as f:
-#     print(f.write("Hello"))
-#     f.seek(0)
-#     data = f.read()  # "Hello"
-#     data += "!"  # "Hello!"
-#     f.seek(0)
-#     f.write(data)
-
-# import os
-#
-# file = "text3.txt"
-# # f = open(file, "w")
-# # f.write("Замена строки в текстовом файле;\n"
-# #         "изменить строку в списке;\n"
-# #         "записать список в файл;\n")
-# # f.close()
-#
-# if os.path.exists(file):
-#     f = open(file, "r")
-#     read_line = f.readlines()
-#     f.close()
-#
-#     pos1 = int(input("pos1 = ")) - 1  # 1
-#     pos2 = int(input("pos2 = ")) - 1  # 3
-#
-#     # if 0 <= pos1 < len(read_line) and 0 <= pos2 < len(read_line):
-#     # if 0 < pos1 <= len(read_line) and 0 < pos2 <= len(read_line):
-#     if 0 <= pos1 < len(read_line) and 0 <= pos2 < len(read_line):
-#         read_line[pos1], read_line[pos2] = read_line[pos2], read_line[pos1]
-#     else:
-#         print("Такой строки нет")
-#     print(read_line)
-#
-#     f = open(file, "w")
-#     f.writelines(read_line)
-#     f.close()
-#
-# else:
-#     print("Такого файла нет")
-# s = "Hello\"World"
-# print(len(s))
-
-# print("Данные в локальном репозитории")
-
-# print("Код, созданный на новом устройстве")
-
-# import os
-
-# dirs = [r'Work\F1', r'Work\F2\F21']
-#
-# # for d in dirs:
-# #     os.makedirs(d)
-#
-# files = {
-#     'Work': ['w.txt'],
-#     r'Work\F1': ['f11.txt', 'f12.txt', 'f13.txt'],
-#     r'Work\F2\F21': ['f211.txt', 'f212.txt']
-# }
-
-# for key, value in files.items():
-#     for file in value:
-#         file_path = os.path.join(key, file)
-#         open(file_path, 'w').close()
-
-
-# file_with_text = [r'Work\w.txt', r'Work\F1\f12.txt', r'Work\F2\F21\f211.txt', r'Work\F2\F21\f212.txt']
-
-# for file in file_with_text:
-#     with open(file, 'w') as f:
-#         f.write(f"Некоторый текст для файла {file}")
-
-# Work\w.txt
-# Work\F1\f11.txt
-# Work\F1\f12.txt
-# Work\F1\f13.txt
-# Work\F2\F21\f211.txt
-# Work\F2\F21\f212.txt
-
-
-# def print_tree(topdown):
-#     print(f"Обход Work {'сверху вниз' if topdown else 'снизу вверх'}")
-#     for root, directory, file in os.walk("Work", topdown):
-#         print(root)
-#         print(directory)
-#         print(file)
-#     print("-" * 50)
-#
-#
-# print_tree(False)
-# print_tree(True)
-
-# import os
-# import time
-
-# path = "main.py"
-# print(os.path.getsize(path))  # размер файла
-# print(os.path.getatime(path))  # время последнего доступа к файлу
-# print(os.path.getmtime(path))  # время последнего изменения файла
-# print(os.path.getctime(path))  # время создания файла
-#
-# size = os.path.getsize(path)
-# a_time = os.path.getatime(path)
-# m_time = os.path.getmtime(path)
-# c_time = os.path.getctime(path)
-#
-# print(time.strftime("%d.%m.%Y, %H:%M:%S", time.localtime(a_time)))
-# print(time.strftime("%d.%m.%Y, %H:%M:%S", time.localtime(m_time)))
-# print(time.strftime("%d.%m.%Y, %H:%M:%S", time.localtime(c_time)))
-# print(size)
-# print(size // 1024)
-
-
-import os
-
-from prompt_toolkit.win32_types import COORD
-from scipy.special.cython_special import powm1
-
-
-# file_path = r"nested1\nested2\nested3\text2.txt"
-#
-# if os.path.exists(file_path):
-#     directory, file = os.path.split(file_path)
-#     atime = os.path.getatime(file_path)
-#     print(f"{file} ({directory}) - {atime}")
-# else:
-#     print(f"Файл {file_path} не существует")
-
-
-# dir_name = "Work"
-#
-# objs = os.listdir(dir_name)
-# print(objs)
-#
-#
-# for obj in objs:
-#     p = os.path.join(dir_name, obj)
-#     # print(p)
-#     if os.path.isfile(p):
-#         print(f"{obj} - file - {os.path.getsize(p)} bytes")
-#     if os.path.isdir(p):
-#         print(f"{obj} - dir")
-
-# import os
-
-
-# def info_files(root, folder):
-#     for root, dirs, files in os.walk(root):
-#         for file in files:
-#             file_path = os.path.join(root, file)
-#             # print(file_path)
-#             file_size = os.path.getsize(file_path)
-#             if file_size == 0:
-#                 os.renames(file_path, os.path.join(folder, file))
-#                 print(f"Файл {file} перемещен из папки {root} в папку {folder}")
-#             else:
-#                 print(f"{file_path} - {file_size} bytes")
-#
-#
-# info_files("Work", "Work/empty_files")
-
-# Work\w.txt
-# Work\F1\f11.txt
-# Work\F1\f12.txt
-# Work\F1\f13.txt
-# Work\F2\F21\f211.txt
-# Work\F2\F21\f212.txt
-
-# ООП
-
-# class Point:
-#     x = 1
-#     y = 2
-
-
-# p1 = Point()
-# # Point.x = 100
-# # print(p1.x)
-# # print(Point.x)
-# # print(id(p1))
-# # print(id(Point))
-# p1.x = 100
-# p1.y = 50
-# print(p1.x, p1.y)
-# print(p1.__dict__)
-#
-# p2 = Point()
-# print(p2.x, p2.y)
-# print(p2.__dict__)
-# print(Point.__dict__)
-
-
-# class Point:
-#     x = 1
-#     y = 2
-#
-#     def set_coord(self):
-#         print(self.__dict__)
-#
-#
-# p1 = Point()
-# p1.x = 5
-# p1.y = 10
-# p1.set_coord()
-# Point.set_coord(p1)
-#
-# p2 = Point()
-# p2.set_coord()
-
-
-# class Point:
-#     x = 1
-#     y = 2
-#
-#     def set_coord(self, x1, y1):
-#         self.x = x1
-#         self.y = y1
-#
-#
-# p1 = Point()
-# p1.set_coord(5, 10)
-# Point.set_coord(p1, 10, 20)
-# print(p1.__dict__)
-#
-# p2 = Point()
-# p2.set_coord(2, 7)
-# print(p2.__dict__)
-
-
-# class Human:
-#     name = "name"
-#     birthday = "00.00.0000"
-#     phone = "00-00-00"
-#     country = "country"
-#     city = "city"
-#     address = "street, house"
+# class Person:
+#     def __init__(self, first_name, last_name, qualification):
+#         self.first_name = first_name
+#         self.last_name = last_name
+#         self.qualification = qualification
 #
 #     def print_info(self):
-#         print(" Персональные данные ".center(40, "*"))
-#         print(f"Имя: {self.name}\nДата рождения: {self.birthday}\n"
-#               f"Номер телефона: {self.phone}\nСтрана: {self.country}\n"
-#               f"Город: {self.city}\nДомашний адрес: {self.address}")
+#         print(f"Данные сотрудника: {self.first_name} {self.last_name}")
+#         print(f"Квалификация сотрудника: {self.qualification}")
 #         print("=" * 40)
 #
-#     def input_info(self, first_name, birthday, phone, country, city, address):
-#         self.name = first_name
-#         self.birthday = birthday
-#         self.phone = phone
-#         self.country = country
-#         self.city = city
-#         self.address = address
-#
-#     def set_name(self, name):  # установили новое имя
-#         self.name = name
-#
-#     def get_name(self):  # получили имя
-#         return self.name
+#     def increase_qualification(self, units_sold):
+#         # Увеличиваем квалификацию на количество проданных единиц
+#         self.qualification += units_sold
 #
 #
-# h1 = Human()
-# h1.print_info()
-# h1.input_info("Юля", "23.05.1986", "45-46-98", "Россия", "Москва", "Чистопрудный бульвар, 1A")
-# h1.print_info()
-# h1.set_name("Юлия")
-# h1.print_info()
-# print(h1.get_name())
+# employee1 = Person("Viktor", "Reznick", 13)
+# employee2 = Person("Anna", "Dotlich", 12)
 #
-
-# class Person:
-#     skill = 10
+# employee1.print_info()
+# employee2.print_info()
 #
-#     def __init__(self, name, surname):
-#         self.name = name
-#         self.surname = surname
+# employee1.increase_qualification(3)  # Виктор продал 3 единицы
+# employee2.increase_qualification(5)  # Анна продала 5 единиц
 #
-#     def __del__(self):
-#         print("Удаление экземпляра\n\n")
-#
-#     def print_info(self):
-#         print("Данные сотрудника:", self.name, self.surname)
-#
-#     def add_skill(self, k):
-#         self.skill += k
-#         print("Квалификация сотрудника:", self.skill, "\n")
-#
-#
-# p1 = Person("Виктор", "Резник")
-# p1.print_info()
-# p1.add_skill(3)
-# # del p1
-# p1 = 5
-#
-# p2 = Person("Анна", "Долгих")
-# p2.print_info()
-# p2.add_skill(2)
+# print("После увеличения квалификации:")
+# employee1.print_info()
+# employee2.print_info()
 
 
-# class Person:
-#     count = 0  # 3
-#
-#     def __init__(self, name, surname):
-#         self.name = name
-#         self.surname = surname
-#         Person.count += 1
-#
-#     def print_info(self):
-#         print("Данные сотрудника:", self.name, self.surname)
-#
-#
-# p1 = Person("Виктор", "Резник")
-# p1.print_info()
-# print(p1.count)
-# p2 = Person("Анна", "Долгих")
-# p2.print_info()
-#
-# p3 = Person("Анна", "Долгих")
-# print(p2.count)
-# print(Person.count)
+class Robot:
+    # Конструктор класса
+    def __init__(self, name):
+        self.name = name
+        self.is_working = False
+        self.worker_count = 0
 
-# class Robot:
-#     k = 0
-#
-#     def __init__(self, name):
-#         self.name = name
-#         print("Инициализация робота:", self.name)
-#         Robot.k += 1
-#
-#     def __del__(self):
-#         print(self.name, "выключается!")
-#         Robot.k -= 1
-#
-#         if Robot.k == 0:
-#             print(self.name, "был последним")
-#         else:
-#             print("Работающих роботов осталось:", Robot.k)
-#
-#     def say_hi(self):
-#         print("Приветствую! Меня зовут:", self.name)
-#
-#
-# droid1 = Robot("R2-D2")
-# droid1.say_hi()
-# print("Численность роботов:", Robot.k)
-#
-# droid2 = Robot("C-3PO")
-# droid2.say_hi()
-# print("Численность роботов:", Robot.k)
-#
-# droid3 = Robot("PC-3O")
-# droid3.say_hi()
-# print("Численность роботов:", Robot.k)
-#
-# print("\nЗдесь роботы могут проделать какую-то работу.\n")
-# print("Роботы закончили свою работу. Давайте их выключим.\n")
-#
-# del droid1, droid2, droid3
-#
-# print("Численность роботов:", Robot.k)
-#
-#
-# class Point:
-#     def __init__(self, x, y):
-#         self.x = x
-#         self.y = y
-#
-#
-# p1 = Point(5, 10)
-# print(p1.x, p1.y)
-# p1.x = 100
-# p1.y = "abc"
-# print(p1.__dict__)
-#
+    # Метод для начала работы
+    def start_work(self):
+        if not self.is_working:
+            self.is_working = True
+            self.worker_count += 1
+            print(f"Приветствую! Я робот {self.name}.")
+            print(f"Членность роботов: {self.worker_count}")
+        else:
+            print(f"Робот {self.name} уже работает.")
+
+    # Метод для завершения работы
+    def finish_work(self):
+        if self.is_working:
+            self.is_working = False
+            self.worker_count -= 1
+            print(f"Робот {self.name} завершил работу.")
+            print(f"Работает роботов осталось: {self.worker_count}")
+        else:
+            print(f"Робот {self.name} не работает в данный момент.")
 
 
-# import math
-#
-# class Rectangle:
-#     def __init__(self, length, width):
-#         self.length = length
-#         self.width = width
-#
-#     def area(self):
-#         return self.length * self.width
-#
-#     def perimeter(self):
-#         return 2 * (self.length + self.width)
-#
-#     def diagonal(self):
-#         return round(math.sqrt(self.length**2 + self.width**2), 2)
-#
-#     def draw(self):
-#         for _ in range(self.length):
-#             print("*" * self.width)
-#
-#
-# # Создание объекта и вывод характеристик
-# rect = Rectangle(3, 9)
-# print(f"Длина прямоугольника: {rect.length}")
-# print(f"Ширина прямоугольника: {rect.width}")
-# print(f"Площадь прямоугольника: {rect.area()}")
-# print(f"Периметр прямоугольника: {rect.perimeter()}")
-# print(f"Гипотенуза прямоугольника: {rect.diagonal()}")
-#
-# # Рисуем прямоугольник
-# rect.draw()
-#
+# Создание объектов роботов
+robot1 = Robot("R2-D2")
+robot2 = Robot("C-3PO")
 
-#
-# class Point:
-#     def __init__(self, x, y):
-#         self.__x = x
-#         self.__y = y
-#
-#     def set_coord_x(self, x):
-#         print("вызов set_coord_x")
-#         self.__x = x
-#     def get_coord_x(self):
-#         print("вызов set_coord_x")
-#         return self.__x
-#
-#         coordX = property(__get__coordx, __set__coord_x)
-#
+robot1.start_work()  # Запуск работы робота 1
+robot2.start_work()  # Запуск работы робота 2
 
-# class Point:
-#     def __init__(self, x, y):
-#         self.__x = x
-#         self.__y = y
-#
-#     def get_coord_x(self):
-#         print("вызов set_coord_x")
-#         return self.__x
-#
-#     def set_coord_x(self, x):
-#         print("вызов set_coord_x")
-#         self.__x = x
-#
-#
-#
-#
-# p1 = Point(5, 10)
-# p1.set_coord_x(100)
-# print(p1.get_coord_x())
+print("\nЗдесь роботы могут проделать какую-то работу.\n")
 
-#
-# class Person:
-#     def __init__(self, name, old):
-#         self.__name = name
-#         self.__old = old
-#
-#     @property
-#     def name(self):
-#         return self.__name
-#
-#     @name.setter
-#     def name(self, value):
-#         self.__name = value
-#
-#     @name.deleter
-#     def name(self):
-#         del self.__name
-#
-#     @property
-#     def old(self):
-#         return self.__old
-#
-#     @old.setter
-#     def old(self, value):
-#         self.__old = value
-#
-#     @old.deleter
-#     def old(self):
-#         del self.__old
-#
-#
-# # Проверка работы
-# p = Person("Rahima", 26)
-# print(p.__dict__)  # Выводит закрытые атрибуты
-#
-# p.name = "rafael"
-# p.old = 38
-#
-# print(p.name)  # Igor
-# print(p.old)   # 31
-#
-# del p.name  # Удаляем имя
-# print(p.__dict__)  # Проверяем, что имя удалено
-
-# class WeightConverter:
-#     KG_TO_LBS = 2.20462  # Коэффициент перевода 1 кг = 2.20462 фунта
-#
-#     def __init__(self, kg):
-#         if not isinstance(kg, (int, float)):
-#             raise ValueError("Килограммы должны быть числом")
-#         self.kg = kg
-#
-#     def to_pounds(self):
-#         return round(self.kg * self.KG_TO_LBS, 5)  # Округляем до 5 знаков
-#
-#     def __str__(self):
-#         return f"{self.kg} кг => {self.to_pounds()} фунтов"
-#
-#
-# # Проверка работы
-# w1 = WeightConverter(12)
-# print(w1)  # 12 кг => 26.45544 фунтов
-#
-# w2 = WeightConverter(41)
-# print(w2)  # 41 кг => 90.40542 фунтов
-#
-
-class Point:
-    __count = 0
-
-    def __init__(self, x=0, y=0):
-        self.x = x
-        self.y = y
-        Point.__count += 1
-
-    @classmethod
-    def get_count(cls):
-        return cls.__count
-
-
-p1 = Point(1, 2)
-p2 = Point(3, 4)
-p3 = Point(5, 6)
-
-
-print(Point.get_count())
-
+robot1.finish_work()  # Завершение работы робота 1
+robot2.finish_work()  # Завершение работы робота 2
