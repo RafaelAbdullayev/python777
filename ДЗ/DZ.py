@@ -1,29 +1,15 @@
-class Автомобиль:
-    def __init__(self, модель, год, производитель, мощность, цвет, цена):
-        self.модель = модель
-        self.год = год
-        self.производитель = производитель
-        self.мощность = мощность
-        self.цвет = цвет
-        self.цена = цена
+class Converter:
+    def __init__(self, kg):
+        if not (type(kg) is int or type(kg) is float):
+            raise ValueError("Килограммы")
+        self.kg = kg
 
-    def показать_информацию(self):
-        print("********** Данные автомобиля **********")
-        print(f"Название модели: {self.модель}")
-        print(f"Год выпуска: {self.год}")
-        print(f"Производитель: {self.производитель}")
-        print(f"Мощность двигателя: {self.мощность} л.с.")
-        print(f"Цвет машины: {self.цвет}")
-        print(f"Цена: {self.цена}")
-        print("=======================================")
-
-    def изменить_цену(self, новая_цена):
-        self.цена = новая_цена
-
-    def изменить_цвет(self, новый_цвет):
-        self.цвет = новый_цвет
+    def kq(self):
+        return round(self.kg * 2.20462, 3)
 
 
-авто = Автомобиль("X7 M50i", 2021, "BMW", 530, "white", 10790000)
+fut = [12, 41]
 
-авто.показать_информацию()
+for f1 in fut:
+    converter = Converter(f1)
+    print(f"{f1} кг => {converter.kq()} фунтов")
